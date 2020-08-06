@@ -14,7 +14,7 @@ from gi.repository import Gio, GnomeDesktop  # isort:skip
 
 
 global factory
-factory = GnomeDesktop.DesktopThumbnailFactory()
+factory = GnomeDesktop.DesktopThumbnailFactory().new(GnomeDesktop.DesktopThumbnailSize.LARGE)
 logger.remove()
 logger.add(sys.stdout, level="INFO")
 logger.add("/tmp/thumbgen.log", level="DEBUG", rotation="100 MB")
